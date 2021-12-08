@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= product.name %>
+    </title>
+</head>
+
+<body>
+    <div class="details" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="border: black solid 1px; text-align: center; width: fit-content;">
+            <h1 style="padding: 20px;">
+                <%= product.name %>
+            </h1>
+            <h3 style="padding: 20px;">
+                Price: $<%= product.price %>
+            </h3>
+            <h3 style="padding: 20px;">
+                Category: <%= product.category %>
+            </h3>
+        </div>
+        <a href="/products"><button style="margin: 10px; border: black solid 1.5px;">BACK</button></a>
+
+    </div>
+
+</body>
+
+</html>

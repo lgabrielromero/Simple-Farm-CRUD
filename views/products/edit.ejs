@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit<% %>
+    </title>
+</head>
+
+<body>
+    <div style="border: black 2px solid; padding: 10px; width: fit-content; ">
+        <form action="/products/<%=product.id%>?_method=PUT" method="post">
+            <h2>Add a product</h2>
+            <label for="producto">Producto</label><input id="producto" name="name" type="text"
+                value="<%= product.name %>">
+            <label for="precio">Precio</label><input id="precio" name="price" type="number" step=".01"
+                value="<%= product.price %>">
+            <label for="categoria">Categoria</label>
+            <select name="category" id="categoria">
+                <option value="dairy" <%=product.category==='dairy' ? 'selected' : '' %> >Dairy</option>
+                <option value="vegetable" <%=product.category==='vegetable' ? 'selected' : '' %>>Vegetable</option>
+                <option value="fruit" <%=product.category==='fruit' ? 'selected' : '' %>>Fruit</option>
+            </select>
+            <button type="submit">MODIFY</button>
+            <button type="reset">RESET</button>
+        </form>
+
+    </div>
+    <br>
+    <a href="/products/modify"><button>BACK</button></a>
+    <br>
+    <form style="padding-top: 10px;" action="/products/<%= product.id %>?_method=DELETE" method="post">
+        <button type="submit">DELETE</button>
+    </form>
+</body>
+
+</html>

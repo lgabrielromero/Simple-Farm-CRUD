@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">ALL PRODUCTS!</h1>
+    <form action="products?:category" style="display: flex; flex-direction: column; align-items: center; ">
+        <select name="categorySelector" id="categorySelector">
+            <option value=""></option>
+            <option value="dairy">Dairy</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="fruit">Fruit</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+    <ul style="padding-inline-start: 0; display: flex; flex-direction: column; align-items: center;">
+        <% for(let product of products) { %>
+            <li style="border: 1px solid black; list-style: none; text-align: center; width: 20em;">
+                <a href="/products/<%= product.id %> " style="text-decoration: none; color: black;">
+                    <h2>
+                        <%= product.name %>
+                    </h2>
+                </a>
+            </li>
+            <br>
+            <% }%>
+                <a href="/"><button>BACK</button></a>
+    </ul>
+
+</body>
+
+</html>
