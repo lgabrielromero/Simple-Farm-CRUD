@@ -6,10 +6,12 @@ I used MongoDB and connected it with Mongoose. Then used Express for requests.
 
 ## how to:
 You need to use MongoDB an exec seeds.js with Node to fill the db with the first 5 items.
-after that, just exec index.js and start using.
-
-
-
+after that, just exec index.js and start using. It uses the following dependencies:
+- ejs
+- express
+- method-override
+- mongoose
+- nodemon
 
 
 ## list of products
